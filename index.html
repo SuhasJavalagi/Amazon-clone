@@ -9,9 +9,9 @@
 </head>
 <body>
     <header>
-        <div class="navbar">
+        <div class="navbar" id="navbar">
             <div class="nav-logo border">
-                <div class="logo"></div>
+               <a href="./index.html"><div class="logo"></div></a>
             </div>
 
             <div class="nav-address border">
@@ -44,10 +44,12 @@
                 </select>
             </div>
 
-            <div class="nav-signin border">
-                <p class="nav-hello">Hello, sign in</p>
-                <p class="nav-account">Account & Lists</p>
-            </div>
+            <button class="open-button" onclick="openForm()">
+                <div class="nav-signin border" >
+                    <p class="nav-hello">Hello, sign in</p>
+                    <p class="nav-account">Account & Lists</p>
+                </div>
+            </button>
 
             <div class="nav-orders border">
                 <p class="nav-p1">Returns</p>
@@ -146,8 +148,52 @@
             </div>
         </div>
     </div>
+
+    <!-- sign in form Starts Here -->
+    <div class="form-popup" id="myForm">
+        <form action="/action_page.php" class="form-container">
+            <br>
+            <caption><h2>Sign Up Today</h2></caption>
+            <br>
+            <div class="login-form">
+                <label for="username"><b>Username</b></label>
+                <br>
+                <input type="username" placeholder="Enter Your Name" name="username" required style="border: none; padding: 5px; border-radius: 5px; width:200px; margin-top: 5px;">
+                <br>
+                <br>
+                <label for="email"><b>Email</b></label>
+                <br>
+                <input type="email" placeholder="Enter Your Email" name="email" required  style="border: none; padding: 5px; border-radius: 5px; width:200px;margin-top: 5px;">
+                <br>
+                <br>
+                <label><b>Create a Password</b></label>
+                <br>
+                <input type="password" placeholder="Create a Password" name="psw" required style="border: none; padding: 5px; border-radius: 5px; width:200px;">
+                <br>
+                <label><b>Re-Enter Password</b></label>
+                <br>
+                <input type="password" placeholder="Re-Enter Your Password" name="psw" style="border: none; padding: 5px; border-radius: 5px; width:200px;">  
+                <br>
+                <div class="form-buttons" style="width: 100%;text-align: center;">
+                    <button type="submit" onclick="alert('Signup Complete')" class="btn">Login</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>    
+                </div>
+            </div>
+        </form>
+    </div>
+      <!-- sign in form ends Here -->
+                
+    <script>
+        function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+    </script>
     <footer>
-        <a href="./index.html">
+        <a href="#navbar">
             <div class="foot1">
                 <p>Back to top</p>
             </div>
@@ -205,8 +251,10 @@
            </div>
            <div class="foot-last">
             <p> &copy; 1996-2023, Amazon.com,Inc.or its affiliates</p>
+            <!-- <p> &copy; Made with <span class="redHearts">&hearts;</span> By Suhas A J</p> -->
            </div>
         </div>
     </footer>
+    
 </body>
 </html>
