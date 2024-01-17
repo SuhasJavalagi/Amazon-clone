@@ -234,7 +234,7 @@
 /*Hero  Image*/
 
 .hero-image{
-    background-image: url("Hero Image.jpg");
+    background-image: url("Hero\ Img.jpg");
     background-size: cover;
     height: 600px;
     display: flex;
@@ -259,16 +259,15 @@
 }
 /*blur image in botton*/
 
-.Blur-img {
+/* .Blur-img {
     height: 200px;
-    width: 200%;
+    width: 100%;
     margin-left: -100px;
     position: relative;
     bottom: 100px;
     background-color: #ffffff;
     filter: blur(50px);
-    
-}
+} */
 
 /*shop Section*/
 
@@ -276,7 +275,7 @@
 .shop-section {
     display: inline;
     position: relative;
-    bottom: 430px;
+    bottom: 200px;
     align-items: center;
 
 }
